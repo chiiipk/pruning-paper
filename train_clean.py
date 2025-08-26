@@ -113,8 +113,8 @@ def main():
     train_dataloader = create_dataloader(
         dataset_name=args.dataset,
         split="train",
-        batch_size=cfg.get('batch_size', 16),
-        max_length=cfg.get('max_length', 512)
+        batch_size=cfg.get('batch_size', 4),
+        max_length=cfg.get('max_length', 256)
     )
     
     # Use test split for datasets that don't have validation
@@ -122,8 +122,8 @@ def main():
     eval_dataloader = create_dataloader(
         dataset_name=args.dataset,
         split=eval_split,
-        batch_size=cfg.get('batch_size', 16),
-        max_length=cfg.get('max_length', 512)
+        batch_size=cfg.get('batch_size', 4),
+        max_length=cfg.get('max_length', 256)
     )
     
     # Wrap dataloaders in DataSpec for Composer batch size detection and custom splitting
@@ -186,3 +186,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
