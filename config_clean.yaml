@@ -28,8 +28,8 @@ optimizer:
   weight_decay: 0.01
 
 # Training settings
-batch_size: 16
-max_length: 512
+batch_size: 8
+max_length: 256
 max_duration: "1000ba"
 eval_interval: "100ba"
 save_interval: "500ba"
@@ -38,3 +38,4 @@ seed: 42
 device: gpu
 
 precision: "amp_bf16"
+
